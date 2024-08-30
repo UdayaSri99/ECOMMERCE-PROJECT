@@ -77,3 +77,6 @@ function viewDetails(productId) {
     // Redirect to the details page with the product ID as a query parameter
     window.location.href = `details.html?id=${productId}`;
 }
+function filterProducts(category) {
+    displayProducts(products, category);
+}

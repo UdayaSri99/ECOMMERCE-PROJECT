@@ -42,7 +42,6 @@ function displayProductDetails(product) {
         </div>
     `;
 }
-
 function addToCart(id, title, image, price) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const existingProductIndex = cart.findIndex(p => p.id === id);
@@ -60,6 +59,7 @@ function addToCart(id, title, image, price) {
    updateCartCount();
    alert('Product added to cart');
 }
+
 
 function updateCartCount() {
    let cart = JSON.parse(localStorage.getItem('cart')) || [];
