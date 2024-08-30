@@ -36,7 +36,7 @@ function displayCartItems() {
                     <p>Quantity: <span id="quantity-${item.id}">${item.quantity}</span></p>
                     <p>Total: $${itemTotal.toFixed(2)}</p>
                     <div class="quantity-controls">
-                        <button onclick="changeQuantity(${item.id}, -1)">-</button>
+                        <button onclick="changeQuantity(${item.id}, -1)">-</button>Product
                         <button onclick="changeQuantity(${item.id}, 1)">+</button>
                     </div>
                 </div>

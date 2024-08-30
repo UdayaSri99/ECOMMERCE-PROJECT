@@ -65,22 +65,29 @@ body {
     padding: 10px;
     display: flex;
     align-items: center;
+    width: 700px;
+
 }
 
 .cart-item-details {
     display: flex;
+    gap: 30px;
     align-items: center;
 }
 
 .cart-item-details img {
-    max-width: 100px;
-    max-height: 100px;
+    width: 200px;
+    height: 100px;
     margin-right: 15px;
 }
 
 .quantity-controls button {
     margin: 0 5px;
+    padding: 7px;
+    color: aliceblue;
+    background-color: rgb(117, 100, 100);
 }
+
 
 #total-amount {
     margin: 20px;
@@ -93,6 +100,7 @@ body {
     background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
+    width: 600px;
 }
 
 .order-summary h3 {
@@ -116,9 +124,36 @@ body {
 }
 
 .order-summary button:hover {
-    background-color: #0056b3;
+   
+    color: white
+    background-color: black;
 }
 
 .entire{
     display: flex;
+}
+.btn button{
+    
+    margin: 5px;
+    padding: 10px 15px;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 20px;
+   
+}
+.btn{
+    text-align: center;
+  
+}
+.btn a{
+    text-decoration: none;
+
+}
+
+.btn a button:hover{
+    color: aliceblue;
+    background-color: black;
 }
