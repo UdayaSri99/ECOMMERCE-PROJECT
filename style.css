@@ -103,7 +103,7 @@ body {
     padding: 10px;
     margin: 10px;
     width: 400px;
-    height: 550px;
+    height: 500px;
     text-align: center;
     background-color: #ffff ;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -142,6 +142,24 @@ product-card h3 {
 .product-card button:hover {
     background-color: black;
     color: aliceblue;
+}
+
+.title{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: x;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.des{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: x;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
