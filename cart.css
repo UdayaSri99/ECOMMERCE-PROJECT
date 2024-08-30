@@ -1,0 +1,74 @@
+
+.header{
+    display: flex;
+    justify-content:space-between;
+}
+.icons{
+     display: flex; 
+    justify-content: space-between; 
+    gap: 15px;
+    font-size: 20px;
+    align-items: center;
+}
+.icons1 ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+  
+}
+.icons ul li a{ 
+    text-decoration: none;
+}
+.icons ul {
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 15px; */
+    list-style: none;
+    text-decoration: none;
+}
+
+.icons2 ul li a button:hover{    color:white;
+    background-color: #333;
+}
+.icons2 ul li a button{
+    margin: 5px;
+    padding: 10px 15px;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+
+
+}
+.cart-item{
+            border: 1px solid #ddd;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .cart-item{
+            width: 700px;
+            
+        }
+        .cart-item img {
+            width: 200px;
+            height: 100px;
+            margin-right: 50px;
+            margin-left: 20px;
+        }
+        .cart-item-details {
+            display: flex;
+            align-items: center;
+           
+        }
+        .cart-item-details div {
+            margin-left: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .quantity-controls {
+            margin-top: 10px;
+        }
+.entire{
+    display: flex;
+   gap: 150px;
+}
