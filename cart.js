@@ -6,12 +6,16 @@ function displayCartItems() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartItemsContainer = document.getElementById('cart-items');
     const totalAmountElement = document.getElementById('total-amount');
+    const orderSummaryElement = document.getElementById('order-summary');
+
+    const shippingCost = 30; // Example shipping cost
 
     cartItemsContainer.innerHTML = ''; // Clear any existing content
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
         totalAmountElement.innerHTML = '';
+        orderSummaryElement.innerHTML = '';
         return;
     }
 
@@ -28,7 +32,7 @@ function displayCartItems() {
                 <img src="${item.image}" alt="${item.title}">
                 <div>
                     <h3>${item.title}</h3>
-                    <p>Price: $${item.price.toFixed(2)}</p>
+                    <p>Price: $${item.price}</p>
                     <p>Quantity: <span id="quantity-${item.id}">${item.quantity}</span></p>
                     <p>Total: $${itemTotal.toFixed(2)}</p>
                     <div class="quantity-controls">
@@ -41,21 +45,29 @@ function displayCartItems() {
         cartItemsContainer.appendChild(cartItem);
     });
 
-    const shippingCost = 30; // Example shipping cost
+    // Update total amount and order summary
     const totalWithShipping = totalAmount + shippingCost;
+    totalAmountElement.innerHTML = `<h2>Total Amount: $${totalWithShipping.toFixed(2)}</h2>`;
 
-    const orderSummaryDiv = document.createElement('div');
-    orderSummaryDiv.classList.add('order-summary');
-    orderSummaryDiv.innerHTML = `
-        <h3>Order Summary</h3>
-        <p>Products (${cart.length}) <span>$${totalAmount.toFixed(2)}</span></p>
-        <p>Shipping <span>$${shippingCost.toFixed(2)}</span></p>
-        <p>Total amount <strong>$${totalWithShipping.toFixed(2)}</strong></p>
-        <button onclick="goToCheckout()">Go to checkout</button>
+    // Generate order summary
+    orderSummaryElement.innerHTML = `
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+                <p>Products (${cart.length})</p>
+                <span>$${totalAmount.toFixed(2)}</span>
+            </div>
+            <div class="summary-row">
+                <p>Shipping</p>
+                <span>$${shippingCost.toFixed(2)}</span>
+            </div>
+            <div class="summary-row">
+                <p>Total amount</p>
+                <strong>$${totalWithShipping.toFixed(2)}</strong>
+            </div>
+            <button onclick="goToCheckout()">Go to checkout</button>
+        </div>
     `;
-    cartItemsContainer.appendChild(orderSummaryDiv);
-
-    totalAmountElement.innerHTML = `<h2>Total Amount: $${totalAmount.toFixed(2)}</h2>`;
 }
 
 function changeQuantity(productId, change) {
@@ -80,6 +92,6 @@ function changeQuantity(productId, change) {
 }
 
 function goToCheckout() {
-    // Placeholder function to handle checkout logic
+    // Functionality for checkout process
     alert('Redirecting to checkout...');
 }
