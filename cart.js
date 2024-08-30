@@ -95,3 +95,4 @@ function goToCheckout() {
     // Functionality for checkout process
     alert('Redirecting to checkout...');
 }
+

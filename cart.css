@@ -116,17 +116,19 @@ body {
 .order-summary button {
     margin-top: 20px;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: black;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 
-.order-summary button:hover {
-   
-    color: white
-    background-color: black;
+
+.order-summary button:hover{
+    color:white;
+    background-color: #333;
 }
 
 .entire{
@@ -156,4 +158,16 @@ body {
 .btn a button:hover{
     color: aliceblue;
     background-color: black;
+}
+footer {
+ 
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width:100%;
+    margin-top: 50px;
 }

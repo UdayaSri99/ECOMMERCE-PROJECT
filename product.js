@@ -49,7 +49,8 @@ function addToCart(productId) {
         if (existingProductIndex > -1) {
             // If it is, increase the quantity
             cart[existingProductIndex].quantity += 1;
-        } else {// If it's not, add it with quantity 1
+        } else {
+            // If it's not, add it with quantity 1
             cart.push({ ...product, quantity: 1  } );
         }
 
@@ -60,6 +61,7 @@ function addToCart(productId) {
         updateCartCount();
     }
 }
+
 function updateCartCount() {
     const cartCountElement = document.getElementById('cart-count');
 
@@ -74,7 +76,4 @@ function updateCartCount() {
 function viewDetails(productId) {
     // Redirect to the details page with the product ID as a query parameter
     window.location.href = `details.html?id=${productId}`;
-}
-function filterProducts(category) {
-    displayProducts(products, category);
 }
