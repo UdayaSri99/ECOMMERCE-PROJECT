@@ -16,7 +16,6 @@ function fetchProducts(category = 'all') {
         })
         .catch(error => console.error('Error fetching products:', error));
 }
-
 function displayProducts(products, category) {
     const productList = document.getElementById('product-list');
     productList.innerHTML = '';
@@ -42,34 +41,32 @@ function displayProducts(products, category) {
 function addToCart(productId) {
     // Find the product by ID
     const product = products.find(p => p.id === productId);
-    
+
     if (product) {
         // Check if the product is already in the cart
         const existingProductIndex = cart.findIndex(p => p.id === productId);
-        
+
         if (existingProductIndex > -1) {
             // If it is, increase the quantity
             cart[existingProductIndex].quantity += 1;
-        } else {
-            // If it's not, add it with quantity 1
+        } else {// If it's not, add it with quantity 1
             cart.push({ ...product, quantity: 1  } );
         }
 
         // Save the cart to localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
-        
+
         // Update the cart count
         updateCartCount();
     }
 }
-
 function updateCartCount() {
     const cartCountElement = document.getElementById('cart-count');
-    
+
     if (cartCountElement) {
         // Calculate the total number of items in the cart
         const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
-    
+
         // Update the cart count display
         cartCountElement.textContent = totalItems;
     }
@@ -78,4 +75,6 @@ function viewDetails(productId) {
     // Redirect to the details page with the product ID as a query parameter
     window.location.href = `details.html?id=${productId}`;
 }
-
+function filterProducts(category) {
+    displayProducts(products, category);
+}

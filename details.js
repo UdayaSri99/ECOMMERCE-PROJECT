@@ -32,7 +32,21 @@ function displayProductDetails(product) {
         <div class = 'desc'><h1>${product.title}</h1>
         <p>${product.description}</p>
         <p><strong>Price:</strong> $${product.price}</p>
-        <p><strong>Category:</strong> ${product.category}</p></div>
+        
+        <p><strong>Category:</strong> ${product.category}</p>
+        <center><button onclick="addToCart(${product.id})"> AddToCart</button>
+        <button onclick="gotocart(${product.id})"> Go To Cart</button></center>
+        </div>
+        
+
         </div>
     `;
 }
+
+
+
+function gotocart(){
+    window.location.href= 'cart.html';
+}
+
+
