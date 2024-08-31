@@ -8,9 +8,9 @@ function displayCartItems() {
     const totalAmountElement = document.getElementById('total-amount');
     const orderSummaryElement = document.getElementById('order-summary');
 
-    const shippingCost = 30; // Example shipping cost
+    const shippingCost = 30; 
 
-    cartItemsContainer.innerHTML = ''; // Clear any existing content
+    cartItemsContainer.innerHTML = ''; 
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';

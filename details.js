@@ -47,7 +47,7 @@ function addToCart(id, title, image, price) {
     const existingProductIndex = cart.findIndex(p => p.id === id);
 
     if (existingProductIndex !== -1) {
-        // If the product is already in the cart, increase the quantity
+        // If the product is already in the cart, increase the quantitygit 
         cart[existingProductIndex].quantity += 1;
     } else {
         // If it's a new product, add it to the cart with a quantity of 1

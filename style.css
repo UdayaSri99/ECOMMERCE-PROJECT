@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     box-sizing: border-box;
+    width: 100%;
 }
 
 
@@ -73,7 +74,7 @@ body {
 }
 .banner img {
     margin-top: 100px;
-    width: 100%;
+    width: 98%;
     height: 400px;
 }
 

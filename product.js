@@ -11,7 +11,7 @@ function fetchProducts(category = 'all') {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            products = data; // Save fetched products to the global variable
+            products = data; 
             displayProducts(products, category);
         })
         .catch(error => console.error('Error fetching products:', error));
